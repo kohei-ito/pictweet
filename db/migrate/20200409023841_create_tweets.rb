@@ -2,8 +2,9 @@ class CreateTweets < ActiveRecord::Migration[6.0]
   def change
     create_table :tweets do |t|
       t.string :name
-      t.text :text
-      t.timestamps
+      t.string :text
+      t.text :image
+      t.timestamps null: true
     end
   end
 end
